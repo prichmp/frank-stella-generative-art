@@ -28,12 +28,12 @@ function fitBandThickness(halfDim: number, count: number, pinstripe: number): nu
 
 export const blackPainting = defineWork<Params>({
   id: 'die-fahne-hoch',
-  title: 'Die Fahne Hoch! (study)',
-  year: '1959',
+  title: 'The Black Paintings',
+  year: 'late 1950s - 1960',
   series: 'Black Paintings',
   aspectRatio: 1,
   caption:
-    'Mirrored nested bands separated by unprimed-canvas pinstripes. Band count drives density; thickness is auto-fit so the bands always reach the center. Toggle Perlin noise on for a tactile linen-like ground.',
+    'The Getty Tomb (similar to the "nested-u" option) is a huge (84 x 96 in) painting in LACMA\'s collection in Los Angeles. If you are in LA, I reccoment making a day out of the La Brea Tar pits and then LACMA. Toggle Perlin noise to simulate the canvas it was painted on.',
   defaultParams: {
     bandCount: 11,
     pinstripe: 2,

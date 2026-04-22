@@ -21,12 +21,12 @@ const palettes: Record<Params['palette'], readonly string[]> = {
 
 export const concentricSquares = defineWork<Params>({
   id: 'concentric-squares',
-  title: 'Concentric Squares (study)',
-  year: '1974',
+  title: 'Concentric Squares',
+  year: 'c. 1972',
   series: 'Concentric Squares',
   aspectRatio: 1,
   caption:
-    'Nested squares as flat color bands separated by thin unpainted gaps. Band count drives density; band width is auto-fit so the bands always reach the center. Toggle Perlin noise on for an organic backing field.',
+    'Frank Stella did several paintings that are essentially nested squares - such as Honduras Lottery Co. (from Multicolored Squares I) (1972).',
   defaultParams: {
     bandCount: 8,
     gapWidth: 3,

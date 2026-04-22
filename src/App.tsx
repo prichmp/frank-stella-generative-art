@@ -7,8 +7,7 @@ export function App() {
       <header className="page-header">
         <h1>Frank Stella, Procedurally</h1>
         <p className="page-sub">
-          Code-drawn studies after Stella, rendered live in your browser. Tweak the controls beside
-          each piece — the canvas redraws on every change.
+          Code-drawn studies of Frank Stella's work. Renders in the browser.
         </p>
       </header>
       <main className="gallery">
@@ -18,8 +17,7 @@ export function App() {
       </main>
       <footer className="page-footer">
         <p>
-          Procedural homages to works by Frank Stella (1936–2024). No image assets are used; every
-          figure is drawn from code on a <code>&lt;canvas&gt;</code>. These are approximations, not
+          Procedural homages to works by Frank Stella. No original imagery used. These are approximations, not
           reproductions.
         </p>
       </footer>
