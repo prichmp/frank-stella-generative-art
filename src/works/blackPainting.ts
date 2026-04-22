@@ -153,7 +153,10 @@ export const blackPainting = defineWork<Params>({
       for (let i = 0; i < p.bandCount; i++) {
         const vyOuter = h - i * stepPerp;
         const vyInner = vyOuter - bandPerp;
-        if (vyInner <= 0) break;
+        // The fit math drives vyInner of the innermost band to ~0; floating
+        // point can leave it slightly negative. Guard on vyOuter so the last
+        // band always renders (the clip handles any sub-pixel overshoot).
+        if (vyOuter <= 0) break;
         const armInner = vyInner;
         ctx.beginPath();
         if (i === 0) {
@@ -178,8 +181,10 @@ export const blackPainting = defineWork<Params>({
     }
 
     // 'mirrored' — horizontal bands stacked from top, mirrored bottom.
+    // Reserve half a pinstripe on each side of the centerline so the two
+    // halves meet with a full pinstripe gap between them, not edge-to-edge.
     const halfH = h / 2;
-    const bandThickness = fitBandThickness(halfH, p.bandCount, p.pinstripe);
+    const bandThickness = fitBandThickness(halfH - p.pinstripe / 2, p.bandCount, p.pinstripe);
     const step = bandThickness + p.pinstripe;
     const bands: Rect[] = [];
     for (let i = 0; i < p.bandCount; i++) {
