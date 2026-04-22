@@ -33,7 +33,7 @@ export const blackPainting = defineWork<Params>({
   series: 'Black Paintings',
   aspectRatio: 1,
   caption:
-    'The Getty Tomb (similar to the "nested-u" option) is a huge (84 x 96 in) painting in LACMA\'s collection in Los Angeles. If you are in LA, I reccoment making a day out of the La Brea Tar pits and then LACMA. Toggle Perlin noise to simulate the canvas it was painted on.',
+    'The Getty Tomb (similar to the "nested-u" option) is a huge (84 x 96 in) painting in LACMA\'s collection in Los Angeles. If you are in LA, I reccoment making a day out of the La Brea Tar Pits and then LACMA. Toggle Perlin noise to simulate the canvas it was painted on.',
   defaultParams: {
     bandCount: 11,
     pinstripe: 2,
